@@ -26,6 +26,9 @@ meta constant empty : local_context
 Fails when the type depends on local constants that are not present in the context.-/
 meta constant mk_local (pretty_name : name) (type : expr) (bi : binder_info) : local_context → option (expr × local_context)
 
+/-- Add a new assigned local constant to the local context. -/
+meta constant mk_assigned (pretty_name : name) (type : expr) (value : expr) : local_context → option (expr × local_context)
+
 meta constant get_local_decl : name → local_context → option local_decl
 
 meta constant get_local : name → local_context → option expr
