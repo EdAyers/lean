@@ -65,7 +65,7 @@ bool interaction_monad<State>::is_state(vm_obj const & o) {
 
 template<typename State>
 auto interaction_monad<State>::to_state(vm_obj const & o) -> State const & {
-    lean_vm_check(dynamic_cast<vm_State*>(to_external(o)));
+    lean_assert(is_state(o));
     return static_cast<vm_State *>(to_external(o))->m_val;
 }
 
