@@ -1,0 +1,8 @@
+widget-segfault.lean:25:55: error: don't know how to synthesize placeholder
+context:
+_x : parse (tk "#widgety"),
+widget_test : parser unit,
+_p : pos,
+_do_match : pos → parser unit,
+l c : ℕ
+⊢ component tactic_state string
